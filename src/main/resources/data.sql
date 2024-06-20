@@ -208,3 +208,7 @@ ORDER BY
     LIMIT 300;
 
 
+ALTER TABLE `result`
+    ADD CONSTRAINT `FK_participant_result` FOREIGN KEY (`participant_id`)
+        REFERENCES `participant` (`id`)
+        ON DELETE CASCADE;

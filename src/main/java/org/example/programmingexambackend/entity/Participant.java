@@ -31,7 +31,7 @@ public class Participant {
     )
     private List<Discipline> disciplines;
 
-    @OneToMany(mappedBy = "participant")
+    @OneToMany(mappedBy = "participant", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Result> results;
 
 }

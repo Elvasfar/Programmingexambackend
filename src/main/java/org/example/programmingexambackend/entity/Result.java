@@ -15,8 +15,8 @@ public class Result {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "participant_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "participant_id",  nullable = false)
     private Participant participant;
 
     @ManyToOne
